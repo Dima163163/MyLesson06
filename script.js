@@ -6,14 +6,13 @@ function randomNumber() {
 
   function repeatsQuestion() {
     const userNumber = prompt("Угадай числа от 0 до 100");
-    count--;
 
     console.log(userNumber);
     console.log(number);
 
     if (count > 0) {
       if (userNumber == null) {
-        return alert(`Вы выбрали отмена. Пока`);
+        return alert(`Вы выбрали отмена. До свидания!`);
       }
       if (userNumber == "") {
         alert(`Введите число!`);
@@ -28,10 +27,12 @@ function randomNumber() {
         }
       }
       if (userNumber > number) {
+        count--;
         alert(`Загаданное число меньше, осталось попыток ${count}`);
         return repeatsQuestion();
       }
       if (userNumber < number) {
+        count--;
         alert(`Загаданное число больше, осталось попыток ${count}`);
         return repeatsQuestion();
       }
