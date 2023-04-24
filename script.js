@@ -20,11 +20,11 @@ function randomNumber() {
       return alert(`Поздравляю, Вы угадали!!!`);
     }
     if (userNumber > number) {
-      alert(`Загаданное число больше`);
+      alert(`Загаданное число меньше`);
       return repeatsQuestion();
     }
     if (userNumber < number) {
-      alert(`Загаданное число меньше`);
+      alert(`Загаданное число больше`);
       return repeatsQuestion();
     }
     if (typeof userNumber !== Number) {
